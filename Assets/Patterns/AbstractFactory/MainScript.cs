@@ -20,7 +20,7 @@ namespace Examples.AbstractFactoryExample
 
         private void Awake()
         {
-            // Задаём значение фабрики по умолчанию
+            // Set the default factory value
             _currentFactory = new RedUnitsFactory();
 
             InitButtons();
@@ -47,7 +47,7 @@ namespace Examples.AbstractFactoryExample
                 archer.transform.SetParent(_unitGrid.transform, false);
             }));
 
-            // Чистим грид
+            // Cleaning up the Grid
             _clearButton.onClick.AddListener((() =>
             {
                 foreach (Transform child in _unitGrid.transform)
