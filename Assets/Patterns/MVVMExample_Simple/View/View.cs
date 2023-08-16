@@ -10,25 +10,25 @@ namespace Patterns.MVVMExample_Simple
         {
             _viewModel = viewModel;
 
-            // Подписка на изменение STR,DEX и VIT
+            // Підписка на зміну STR,DEX і VIT
             _viewModel.StrView.OnChanged += DisplayStrView;
             _viewModel.DexView.OnChanged += DisplayDexView;
             _viewModel.VitView.OnChanged += DisplayVitView;
 
             _viewModel.StatsToSpendView.OnChanged += DisplayStatsToSpend;
 
-            // Подписка на изменение состояния кнопок
+            // Підписка на зміну кнопВідписка від змінок
             _viewModel.StrButtonEnabled.OnChanged += OnStrButtonEnabled;
             _viewModel.DexButtonEnabled.OnChanged += OnDexButtonEnabled;
             _viewModel.VitButtonEnabled.OnChanged += OnVitButtonEnabled;
         }
 
-        // Команды на активацию кнопок
+        // Команди на активацію кнопок
         protected abstract void OnStrButtonEnabled(bool val);
         protected abstract void OnDexButtonEnabled(bool val);
         protected abstract void OnVitButtonEnabled(bool val);
 
-        // Команды на отрисовку значений
+        // Команди на відмальовку значень
         protected abstract void DisplayStatsToSpend(int val);
         protected abstract void DisplayStrView(int val);
         protected abstract void DisplayDexView(int val);
@@ -36,14 +36,14 @@ namespace Patterns.MVVMExample_Simple
 
         protected virtual void Dispose()
         {
-            // Отписка от изменений STR,DEX и VIT
+            // Відписка від змін STR,DEX і VIT
             _viewModel.StrView.OnChanged -= DisplayStrView;
             _viewModel.DexView.OnChanged -= DisplayDexView;
             _viewModel.VitView.OnChanged -= DisplayVitView;
 
             _viewModel.StatsToSpendView.OnChanged -= DisplayStatsToSpend;
 
-            // Отписка от изменений состояния кнопок
+            // Відписка від змін стану кнопок
             _viewModel.StrButtonEnabled.OnChanged -= OnStrButtonEnabled;
             _viewModel.DexButtonEnabled.OnChanged -= OnDexButtonEnabled;
             _viewModel.VitButtonEnabled.OnChanged -= OnVitButtonEnabled;

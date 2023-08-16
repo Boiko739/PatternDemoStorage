@@ -24,12 +24,12 @@ namespace Patterns.MVVMExample_Simple
         {
             base.Init(viewModel);
 
-            // Обработка нажатия на кнопок "+"
+            // Опрацювання нажаття на кнопку "+"
             _addStrButton.onClick.AddListener(_viewModel.OnIncreaseStrBtnClicked);
             _addDexButton.onClick.AddListener(_viewModel.OnIncreaseDexBtnClicked);
             _addVitButton.onClick.AddListener(_viewModel.OnIncreaseVitBtnClicked);
 
-            // Обработка нажатия на кнопки RESET и SUBMIT
+            // Опрацювання нажаття на кнопки RESET і SUBMIT
             _resetButton.onClick.AddListener(_viewModel.OnResetButtonClicked);
             _submitButton.onClick.AddListener(_viewModel.OnSubmitBtnClicked);
 

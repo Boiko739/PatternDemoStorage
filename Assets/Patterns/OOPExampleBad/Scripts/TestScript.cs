@@ -79,7 +79,7 @@ public class TestScript : MonoBehaviour
     {
         _generateUnits.onClick.AddListener((() =>
         {
-            // Чистим грид
+            // Чистимо грід
             foreach (Transform child in _unitGrid.transform)
             {
                 Destroy(child.gameObject);

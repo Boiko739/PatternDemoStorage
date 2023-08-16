@@ -4,16 +4,16 @@
     {
         protected Model _model;
 
-        // Максимальное значение STR, DEX и VIT
+        // Максимальне значення STR, DEX і VIT
         private const int MAX_STAT_VALUE = 18;
 
-        // Значения параметров STR, DEX и VIT
+        // Значення параметрів STR, DEX і VIT
         public ReactiveProperty<int> StrView = new();
         public ReactiveProperty<int> DexView = new();
         public ReactiveProperty<int> VitView = new();
         public ReactiveProperty<int> StatsToSpendView = new();
 
-        // Активность кнопок STR+, DEX+, VIT+
+        // Активність кнопок STR+, DEX+, VIT+
         public ReactiveProperty<bool> StrButtonEnabled = new();
         public ReactiveProperty<bool> DexButtonEnabled = new();
         public ReactiveProperty<bool> VitButtonEnabled = new();
@@ -22,8 +22,8 @@
         {
             _model = model;
 
-            // При изменении в модели STR,DEX и VIT
-            // Обновляем их значения для вьюмодели
+            // При зміні в моделі STR,DEX і VIT
+            // Оновлюємо їх значення для в'ю-моделі
             _model.STR.OnChanged += OnModelStrChanged;
             _model.DEX.OnChanged += OnModelDexChanged;
             _model.VIT.OnChanged += OnModelVitChanged;
@@ -59,7 +59,7 @@
         }
         
         /// <summary>
-        /// Сброс до состояния модели
+        /// Скидання до стану моделі
         /// </summary>
         public void OnResetButtonClicked()
         {
@@ -73,7 +73,7 @@
         }
 
         /// <summary>
-        /// Подтверждение изменений
+        /// Підтвердження змін
         /// </summary>
         public void OnSubmitBtnClicked()
         {
@@ -85,7 +85,7 @@
         }
 
         /// <summary>
-        /// Проверяем, активны или неактивны кнопки "+"
+        /// Перевіряємо, активні, чи неактивні кнопки "+"
         /// </summary>
         private void DefineButtonsStatus()
         {
@@ -112,7 +112,7 @@
             DefineButtonsStatus();
         }
 
-        // Отписываемся
+        // Відписуємось
         public virtual void Dispose()
         {
             _model.STR.OnChanged -= OnModelStrChanged;

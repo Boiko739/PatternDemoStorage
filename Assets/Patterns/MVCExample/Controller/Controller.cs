@@ -11,8 +11,8 @@ public abstract class Controller
       _model = model;
    }
 
-   // Его тоже можно запилить абстрактным,
-   // если у нас будет не чистый рандом а разные варианты
+   // Його також можна зробити абстрактним,
+   // якщо в нас буде не чистий рандом, а різні опції
    public void Spin()
    {
       List<int> tempState = new int[_model.State.Count].ToList();

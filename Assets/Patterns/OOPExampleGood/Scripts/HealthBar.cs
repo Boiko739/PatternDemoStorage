@@ -13,7 +13,6 @@ public class HealthBar : MonoBehaviour
         RedrawHearts(curHealth);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (curHealth != _player.Health)

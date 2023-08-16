@@ -23,8 +23,8 @@ namespace Patterns.MVPExample
             RerollSlot(slotId);
         }
 
-        // It can also be made abstract,
-        // if we don't have a pure random, but different options
+        // Можна зробити його абстрактним,
+        // якщо у нас не чистий рандом, а є різні опції
         protected void Spin()
         {
             List<int> tempState = new int[_model.State.Count].ToList();

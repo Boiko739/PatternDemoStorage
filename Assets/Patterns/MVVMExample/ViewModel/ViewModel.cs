@@ -33,7 +33,7 @@ namespace Patterns.MVVMExample
         {
             _isRerollModeOn = active;
 
-            // Если мы отжимаем RerollMode, то считаем это как спин с текущей датой
+            // Якщо ми віджимаємо RerollMode, то рахуємо це як спін з поточною датою
             if (!_isRerollModeOn)
             {
                 Spin(_viewState);
@@ -71,8 +71,8 @@ namespace Patterns.MVVMExample
         }
 
         /// <summary>
-        /// Пока делаем рандомчик, в случае чего можно сделать
-        /// метод абстрактным если логика будет разной
+        /// Поки робимо рандом, в разі чого можна зробити
+        /// метод абстрактним якщо логіка буде різною
         /// </summary>
         /// <returns></returns>
         protected List<int> CalculateSpinResult()
@@ -87,8 +87,8 @@ namespace Patterns.MVVMExample
         }
 
         /// <summary>
-        /// Пока делаем рандомчик, в случае чего можно сделать
-        /// метод абстрактным если логика будет разной
+        /// Поки робимо рандом, в разі чого можна зробити
+        /// метод абстрактним якщо логіка буде різною
         /// </summary>
         /// <returns></returns>
         protected void RerollSlot(int slotId)

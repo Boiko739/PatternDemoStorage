@@ -14,7 +14,7 @@ public class DeathKit : MonoBehaviour
 
             if (player.health == 0)
             {
-                Debug.Log("You Dead!");
+                Debug.Log("You're dead!");
             }
 
             Destroy(gameObject);

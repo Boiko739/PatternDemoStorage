@@ -9,7 +9,7 @@ public class MainScript : MonoBehaviour
     
     private void Start()
     {
-        var model = new PlayerModel("Oleg", 15, 15, 15, 5);
+        var model = new PlayerModel("Ivan", 15, 15, 15, 5);
         _viewModel = new DefaultViewModel(model);
         var view = GameObject.Instantiate(_viewPrefab);
         view.Init(_viewModel);

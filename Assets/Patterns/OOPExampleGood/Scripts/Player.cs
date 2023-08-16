@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     {
         if (delta <= 0)
         {
-            Debug.LogError("Something wrong with delta! Must be > 0!");
+            Debug.LogError("Something's wrong with delta! Must be > 0!");
             return;
         }
 
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     {
         if (delta <= 0)
         {
-            Debug.LogError("Something wrong with delta! Must be > 0!");
+            Debug.LogError("Something's wrong with delta! Must be > 0!");
             return;
         }
 
@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
         if (_health == 0)
         {
-            Debug.Log("You dead!");
+            Debug.Log("You're dead!");
         }
     }
 }

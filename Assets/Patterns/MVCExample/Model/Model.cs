@@ -7,7 +7,7 @@ public abstract class Model
    protected List<int> _state;
    public List<int> State => _state;
 
-   // Для лимитных и безлимитных спинов
+   // Для лімітних і безлімітних спінів
    public abstract bool HaveSpins();
    protected int _spinsCount;
    public int SpinsCount => _spinsCount;
